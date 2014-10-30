@@ -4,7 +4,7 @@ var patterns = {
   year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
   release: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
-  codec: /xvid|x264|h\.?264/i,
+  video: /xvid|x264|h\.?264/i,
   group: /- ?([^-]+)$/,
   region: /R[0-9]/
 };
@@ -23,7 +23,7 @@ module.exports = function (name) {
     year: name.match(patterns.year),
     resolution: name.match(patterns.resolution),
     release: name.match(patterns.release),
-    codec: name.match(patterns.codec),
+    video: name.match(patterns.video),
     group: name.match(patterns.group),
     region: name.match(patterns.region)
   };
@@ -33,7 +33,7 @@ module.exports = function (name) {
   if(matches.year) parts.year = parseInt(matches.year[1]);
   if(matches.resolution) parts.resolution = matches.resolution[0];
   if(matches.release) parts.release = matches.release[0];
-  if(matches.codec) parts.codec = matches.codec[0];
+  if(matches.video) parts.video = matches.video[0];
   if(matches.group) parts.group = matches.group[1];
   if(matches.region) parts.region = matches.region[0];
 
@@ -43,7 +43,7 @@ module.exports = function (name) {
   if(matches.year && matches.year.index < lowestIndex) lowestIndex = matches.year.index;
   if(matches.resolution && matches.resolution.index < lowestIndex) lowestIndex = matches.resolution.index;
   if(matches.release && matches.release.index < lowestIndex) lowestIndex = matches.release.index;
-  if(matches.codec && matches.codec.index < lowestIndex) lowestIndex = matches.codec.index;
+  if(matches.video && matches.video.index < lowestIndex) lowestIndex = matches.video.index;
   if(matches.group && matches.group.index < lowestIndex) lowestIndex = matches.group.index;
   if(matches.region && matches.region.index < lowestIndex) lowestIndex = matches.region.index;
 

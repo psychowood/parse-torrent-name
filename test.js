@@ -9,7 +9,7 @@ var torrents = [
     episode: 'E03',
     resolution: '720p',
     release: 'HDTV',
-    codec: 'x264',
+    video: 'x264',
     group: 'ASAP[ettv]'
   },
   {
@@ -18,7 +18,7 @@ var torrents = [
     year: 2014,
     resolution: '1080p',
     release: 'BrRip',
-    codec: 'H264',
+    video: 'H264',
     group: 'YIFY'
   },
   {
@@ -26,12 +26,12 @@ var torrents = [
     title: 'Dawn of the Planet of the Apes',
     year: 2014,
     release: 'HDRip',
-    codec: 'XViD',
+    video: 'XViD',
     group: 'EVO'
   },
   {
     name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
-    codec: 'XviD',
+    video: 'XviD',
     group: 'LOL [eztv]'
   },
   {
@@ -81,7 +81,7 @@ var torrents = [
   },
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
-    codec: 'H.264',
+    video: 'H.264',
     year: undefined
   },
   {
