@@ -3,7 +3,7 @@ var patterns = {
   episode: /[E][0-9]{2}/,
   year: /\(?((?:19|20)[0-9]{2})\)?/,
   resolution: /[0-9]{3,4}p/,
-  quality: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
+  release: /HDTV|HDCAM|BrRip|TS|WEB-DL|HDRip|DVDRip|DVDRiP|DVDRIP|CamRip|WEBRip/,
   codec: /xvid|x264|h\.?264/i,
   group: /- ?([^-]+)$/,
   region: /R[0-9]/
@@ -22,7 +22,7 @@ module.exports = function (name) {
     episode: name.match(patterns.episode),
     year: name.match(patterns.year),
     resolution: name.match(patterns.resolution),
-    quality: name.match(patterns.quality),
+    release: name.match(patterns.release),
     codec: name.match(patterns.codec),
     group: name.match(patterns.group),
     region: name.match(patterns.region)
@@ -32,7 +32,7 @@ module.exports = function (name) {
   if(matches.episode) parts.episode = matches.episode[0];
   if(matches.year) parts.year = parseInt(matches.year[1]);
   if(matches.resolution) parts.resolution = matches.resolution[0];
-  if(matches.quality) parts.quality = matches.quality[0];
+  if(matches.release) parts.release = matches.release[0];
   if(matches.codec) parts.codec = matches.codec[0];
   if(matches.group) parts.group = matches.group[1];
   if(matches.region) parts.region = matches.region[0];
@@ -42,7 +42,7 @@ module.exports = function (name) {
   if(matches.episode && matches.episode.index < lowestIndex) lowestIndex = matches.episode.index;
   if(matches.year && matches.year.index < lowestIndex) lowestIndex = matches.year.index;
   if(matches.resolution && matches.resolution.index < lowestIndex) lowestIndex = matches.resolution.index;
-  if(matches.quality && matches.quality.index < lowestIndex) lowestIndex = matches.quality.index;
+  if(matches.release && matches.release.index < lowestIndex) lowestIndex = matches.release.index;
   if(matches.codec && matches.codec.index < lowestIndex) lowestIndex = matches.codec.index;
   if(matches.group && matches.group.index < lowestIndex) lowestIndex = matches.group.index;
   if(matches.region && matches.region.index < lowestIndex) lowestIndex = matches.region.index;

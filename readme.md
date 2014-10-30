@@ -8,8 +8,8 @@ Parses torrent name of a movie or TV show.
 - episode
 - excess
 - group
-- quality
 - region
+- release
 - resolution
 - season
 - title
@@ -29,7 +29,7 @@ ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
 { season: 'S05',
   episode: 'E02',
   resolution: '720p',
-  quality: 'HDTV',
+  release: 'HDTV',
   codec: 'x264',
   group: 'KILLERS[rartv]',
   name: 'The Staying Alive' }
@@ -39,7 +39,7 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
 /*
 { year: '2014',
   resolution: '1080p',
-  quality: 'BrRip',
+  release: 'BrRip',
   codec: 'x264',
   group: 'YIFY',
   name: 'Captain Russia The Summer Soldier' }
@@ -49,7 +49,7 @@ ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 /*
 { excess: [ 'HC', 'AC3' ],
   year: '2014',
-  quality: 'HDRip',
+  release: 'HDRip',
   codec: 'XViD',
   group: 'juggs[ETRG]',
   title: 'AL 288-1' }

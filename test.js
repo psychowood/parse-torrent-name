@@ -8,7 +8,7 @@ var torrents = [
     season: 'S05',
     episode: 'E03',
     resolution: '720p',
-    quality: 'HDTV',
+    release: 'HDTV',
     codec: 'x264',
     group: 'ASAP[ettv]'
   },
@@ -17,7 +17,7 @@ var torrents = [
     title: 'Hercules',
     year: 2014,
     resolution: '1080p',
-    quality: 'BrRip',
+    release: 'BrRip',
     codec: 'H264',
     group: 'YIFY'
   },
@@ -25,7 +25,7 @@ var torrents = [
     name: 'Dawn.of.the.Planet.of.the.Apes.2014.HDRip.XViD-EVO',
     title: 'Dawn of the Planet of the Apes',
     year: 2014,
-    quality: 'HDRip',
+    release: 'HDRip',
     codec: 'XViD',
     group: 'EVO'
   },
@@ -40,19 +40,19 @@ var torrents = [
   },
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
-    quality: 'WEB-DL'
+    release: 'WEB-DL'
   },
   {
     name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',
-    quality: 'DVDRip'
+    release: 'DVDRip'
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
-    quality: 'WEB-DL'
+    release: 'WEB-DL'
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
-    quality: 'HDTV'
+    release: 'HDTV'
   },
   {
     name: 'Marvels Agents of S H I E L D S02E05 HDTV x264-KILLERS [eztv]',
@@ -65,7 +65,7 @@ var torrents = [
   {
     name: 'Guardians Of The Galaxy 2014 R6 720p HDCAM x264-JYK',
     region: 'R6',
-    quality: 'HDCAM'
+    release: 'HDCAM'
   },
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
