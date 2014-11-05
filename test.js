@@ -15,7 +15,7 @@ var torrents = [
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'Hercules (2014) 1080p BrRip H264 - YIFY',
@@ -51,23 +51,23 @@ var torrents = [
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
     extended: true,
     release: 'WEB-DL',
-    excess: 'DD5.1'
+    unknown: 'DD5.1'
   },
   {
     name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
     extended: true,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',
     release: 'WEBDL DVDRip',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
     release: 'PPV WEB-DL',
     group: 'WD -={SPARROW}=-',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
@@ -97,7 +97,7 @@ var torrents = [
   },
   {
     name: 'Guardians of the Galaxy (CamRip / 2014)',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
@@ -121,37 +121,37 @@ var torrents = [
     title: 'Downton Abbey',
     season: 5,
     episode: 6,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    excess: 'AC3'
+    unknown: 'AC3'
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
     hardcoded: true,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'The Flash 2014 S01E04 HDTV x264-FUM[ettv]',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'South Park S18E05 HDTV x264-KILLERS [eztv]',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'The Flash 2014 S01E03 HDTV x264-LOL[ettv]',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
-    excess: ['Dual-Audio', '1400Mb']
+    unknown: ['Dual-Audio', '1400Mb']
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -160,25 +160,25 @@ var torrents = [
   },
   {
     name: 'Teenage Mutant Ninja Turtles (unknown_release_type / 2014)',
-    excess: 'unknown_release_type',
+    unknown: 'unknown_release_type',
     proper: undefined
   },
   {
     name: 'The Simpsons S26E05 HDTV x264 PROPER-LOL [eztv]',
     proper: true,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: '2047 - Sights of Death (2014) 720p BrRip x264 - YIFY',
     title: '2047 - Sights of Death',
     year: 2014,
-    excess: undefined,
+    unknown: undefined,
     repack: undefined
   },
   {
     name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
     repack: true,
-    excess: undefined
+    unknown: undefined
   },
   {
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
