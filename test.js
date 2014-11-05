@@ -1,3 +1,5 @@
+'use strict';
+
 var ptn = require('./');
 var tape = require('tape');
 
@@ -5,12 +7,15 @@ var torrents = [
   {
     name: 'The Walking Dead S05E03 720p HDTV x264-ASAP[ettv]',
     title: 'The Walking Dead',
-    season: 'S05',
-    episode: 'E03',
+    season: 5,
+    episode: 3,
     resolution: '720p',
     release: 'HDTV',
     video: 'x264',
-    group: 'ASAP[ettv]'
+    group: 'ASAP[ettv]',
+    extended: undefined,
+    hardcoded: undefined,
+    excess: undefined
   },
   {
     name: 'Hercules (2014) 1080p BrRip H264 - YIFY',
@@ -31,28 +36,43 @@ var torrents = [
   },
   {
     name: 'The Big Bang Theory S08E06 HDTV XviD-LOL [eztv]',
+    season: 8,
+    episode: 6,
+    release: 'HDTV',
     video: 'XviD',
     group: 'LOL [eztv]'
   },
   {
     name: '22 Jump Street (2014) 720p BrRip x264 - YIFY',
-    title: '22 Jump Street'
+    title: '22 Jump Street',
+    episode: undefined
   },
   {
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
-    release: 'WEB-DL'
+    extended: true,
+    release: 'WEB-DL',
+    excess: 'DD5.1'
+  },
+  {
+    name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
+    extended: true,
+    excess: undefined
   },
   {
     name: 'Hercules (2014) WEBDL DVDRip XviD-MAX',
-    release: 'DVDRip'
+    release: 'WEBDL DVDRip',
+    excess: undefined
   },
   {
     name: 'WWE Hell in a Cell 2014 PPV WEB-DL x264-WD -={SPARROW}=-',
-    release: 'WEB-DL'
+    release: 'PPV WEB-DL',
+    group: 'WD -={SPARROW}=-',
+    excess: undefined
   },
   {
     name: 'UFC.179.PPV.HDTV.x264-Ebi[rartv]',
-    release: 'HDTV'
+    title: 'UFC 179',
+    release: 'PPV.HDTV'
   },
   {
     name: 'Marvels Agents of S H I E L D S02E05 HDTV x264-KILLERS [eztv]',
@@ -87,25 +107,106 @@ var torrents = [
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
     region: 'R5'
+  },
+  {
+    name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
+    release: 'BRRip'
+  },
+  {
+    name: 'These.Final.Hours.2013.WBBRip XViD',
+    release: 'WBBRip'
+  },
+  {
+    name: 'Downton Abbey 5x06 HDTV x264-FoV [eztv]',
+    title: 'Downton Abbey',
+    season: 5,
+    episode: 6,
+    excess: undefined
+  },
+  {
+    name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
+    hardcoded: true,
+    excess: 'AC3'
+  },
+  {
+    name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
+    hardcoded: true,
+    excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E04 HDTV x264-FUM[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'South Park S18E05 HDTV x264-KILLERS [eztv]',
+    excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E03 HDTV x264-LOL[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'The Flash 2014 S01E01 HDTV x264-LOL[ettv]',
+    excess: undefined
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
+    excess: ['Dual-Audio', '1400Mb']
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
+    title: 'Teenage Mutant Ninja Turtles',
+    release: 'HdRip'
+  },
+  {
+    name: 'Teenage Mutant Ninja Turtles (unknown_release_type / 2014)',
+    excess: 'unknown_release_type',
+    proper: undefined
+  },
+  {
+    name: 'The Simpsons S26E05 HDTV x264 PROPER-LOL [eztv]',
+    proper: true,
+    excess: undefined
+  },
+  {
+    name: '2047 - Sights of Death (2014) 720p BrRip x264 - YIFY',
+    title: '2047 - Sights of Death',
+    year: 2014,
+    excess: undefined,
+    repack: undefined
+  },
+  {
+    name: 'Two and a Half Men S12E01 HDTV x264 REPACK-LOL [eztv]',
+    repack: true,
+    excess: undefined
+  },
+  {
+    name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
+    release: 'WEBrip'
   }
 ];
 
 torrents.forEach(function(torrent) {
   var testName = '"' + torrent.name + '"';
+  var parts = ptn(torrent.name);
 
   tape(testName, function (test) {
     var key, testMessage;
 
     for(key in torrent) {
-      if(key === 'name') continue;
+      if(torrent.hasOwnProperty(key)) {
+        if(key === 'name') {
+          continue;
+        }
 
-      testMessage = key + ' should be "' + torrent[key] + '"';
+        testMessage = key + ' should be ' + JSON.stringify(torrent[key]);
 
-      test.equal(
-        ptn(torrent.name)[key],
-        torrent[key],
-        testMessage
-      );
+        test[Array.isArray(torrent[key]) ? 'deepEqual' : 'equal'](
+          parts[key],
+          torrent[key],
+          testMessage
+        );
+      }
     }
 
     test.end();
