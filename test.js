@@ -12,6 +12,7 @@ var torrents = [
     resolution: '720p',
     release: 'HDTV',
     video: 'x264',
+    audio: undefined,
     group: 'ASAP[ettv]',
     extended: undefined,
     hardcoded: undefined,
@@ -51,7 +52,8 @@ var torrents = [
     name: 'Hercules.2014.EXTENDED.1080p.WEB-DL.DD5.1.H264-RARBG',
     extended: true,
     release: 'WEB-DL',
-    unknown: 'DD5.1'
+    audio: 'DD5.1',
+    unknown: undefined
   },
   {
     name: 'Hercules.2014.EXTENDED.HDRip.XViD-juggs[ETRG]',
@@ -89,7 +91,9 @@ var torrents = [
   },
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
-    title: 'Marvel\'s Agents of S H I E L D'
+    title: 'Marvel\'s Agents of S H I E L D',
+    audio: 'DD5.1',
+    unknown: 'Shadows'
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -102,11 +106,14 @@ var torrents = [
   {
     name: 'The.Walking.Dead.S05E03.1080p.WEB-DL.DD5.1.H.264-Cyphanix[rartv]',
     video: 'H.264',
-    year: undefined
+    year: undefined,
+    unknown: undefined
   },
   {
     name: 'Brave.2012.R5.DVDRip.XViD.LiNE-UNiQUE',
-    region: 'R5'
+    region: 'R5',
+    audio: 'LiNE',
+    unknown: undefined
   },
   {
     name: 'Lets.Be.Cops.2014.BRRip.XViD-juggs[ETRG]',
@@ -126,7 +133,8 @@ var torrents = [
   {
     name: 'Annabelle.2014.HC.HDRip.XViD.AC3-juggs[ETRG]',
     hardcoded: true,
-    unknown: 'AC3'
+    audio: 'AC3',
+    unknown: undefined
   },
   {
     name: 'Lucy.2014.HC.HDRip.XViD-juggs[ETRG]',
@@ -151,7 +159,8 @@ var torrents = [
   },
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
-    unknown: ['Dual-Audio', '1400Mb']
+    audio: 'Dual-Audio',
+    unknown: '1400Mb'
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -182,7 +191,48 @@ var torrents = [
   },
   {
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
-    release: 'WEBrip'
+    release: 'WEBrip',
+    audio: 'AC3',
+    unknown: 'MiLLENiUM'
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
+    audio: 'MP3',
+    unknown: undefined
+  },
+  {
+    name: 'Dawn.Of.The.Planet.of.The.Apes.2014.1080p.WEB-DL.DD51.H264-RARBG',
+    audio: 'DD51',
+    unknown: undefined
+  },
+  {
+    name: 'Teenage.Mutant.Ninja.Turtles.2014.720p.HDRip.x264.AC3.5.1-RARBG',
+    audio: 'AC3.5.1',
+    unknown: undefined
+  },
+  {
+    name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
+    audio: 'AAC',
+    unknown: 'Viper'
+  },
+  {
+    name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
+    audio: 'AAC2.0',
+    unknown: undefined
+  },
+  {
+    name: 'Lucy 2014 Dual-Audio 720p WEBRip',
+    audio: 'Dual-Audio',
+    unknown: undefined
+  },
+  {
+    name: 'Into The Storm 2014 1080p BRRip x264 DTS-JYK',
+    audio: 'DTS',
+    unknown: undefined
+  },
+  {
+    name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
+    release: 'BluRay'
   }
 ];
 

@@ -4,6 +4,7 @@ Parses torrent name of a movie or TV show.
 
 **Possible parts extracted:**
 
+- audio
 - episode
 - extended
 - group
@@ -51,10 +52,10 @@ ptn('Captain Russia The Summer Soldier (2014) 1080p BrRip x264 - YIFY');
 
 ptn('AL.288-1.2014.HC.HDRip.XViD.AC3-juggs[ETRG]');
 /*
-{ unknown: [ 'AC3' ],
-  year: 2014,
+{ year: 2014,
   release: 'HDRip',
   video: 'XViD',
+  audio: 'AC3',
   group: 'juggs[ETRG]',
   hardcoded: true,
   title: 'AL 288-1' }
