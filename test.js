@@ -92,8 +92,9 @@ var torrents = [
   {
     name: 'Marvel\'s.Agents.of.S.H.I.E.L.D.S02E01.Shadows.1080p.WEB-DL.DD5.1',
     title: 'Marvel\'s Agents of S H I E L D',
+    episodeName: 'Shadows',
     audio: 'DD5.1',
-    unknown: 'Shadows'
+    unknown: undefined
   },
   {
     name: 'Marvels Agents of S.H.I.E.L.D. S02E06 HDTV x264-KILLERS[ettv]',
@@ -160,7 +161,9 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio WEBRip 1400Mb',
     audio: 'Dual-Audio',
-    unknown: '1400Mb'
+    garbage: '1400Mb',
+    group: undefined,
+    unknown: undefined
   },
   {
     name: 'Teenage Mutant Ninja Turtles (HdRip / 2014)',
@@ -193,7 +196,8 @@ var torrents = [
     name: 'Dinosaur 13 2014 WEBrip XviD AC3 MiLLENiUM',
     release: 'WEBrip',
     audio: 'AC3',
-    unknown: 'MiLLENiUM'
+    group: 'MiLLENiUM',
+    unknown: undefined
   },
   {
     name: 'Teenage.Mutant.Ninja.Turtles.2014.HDRip.XviD.MP3-RARBG',
@@ -212,8 +216,10 @@ var torrents = [
   },
   {
     name: 'Gotham.S01E05.Viper.WEB-DL.x264.AAC',
+    episodeName: 'Viper',
     audio: 'AAC',
-    unknown: 'Viper'
+    group: undefined,
+    unknown: undefined
   },
   {
     name: 'Into.The.Storm.2014.1080p.WEB-DL.AAC2.0.H264-RARBG',
@@ -223,6 +229,7 @@ var torrents = [
   {
     name: 'Lucy 2014 Dual-Audio 720p WEBRip',
     audio: 'Dual-Audio',
+    group: undefined,
     unknown: undefined
   },
   {
@@ -233,6 +240,44 @@ var torrents = [
   {
     name: 'Sin.City.A.Dame.to.Kill.For.2014.1080p.BluRay.x264-SPARKS',
     release: 'BluRay'
+  },
+  {
+    name: 'WWE Monday Night Raw 3rd Nov 2014 HDTV x264-Sir Paul',
+    title: 'WWE Monday Night Raw',
+    garbage: '3rd Nov'
+  },
+  {
+    name: 'Jack.And.The.Cuckoo-Clock.Heart.2013.BRRip XViD',
+    title: 'Jack And The Cuckoo-Clock Heart',
+    group: undefined,
+    unknown: undefined
+  },
+  {
+    name: 'WWE Hell in a Cell 2014 HDTV x264 SNHD',
+    group: 'SNHD',
+    unknown: undefined
+  },
+  {
+    name: 'Dracula.Untold.2014.TS.XViD.AC3.MrSeeN-SiMPLE',
+    group: 'MrSeeN-SiMPLE',
+    unknown: undefined
+  },
+  {
+    name: 'The Missing 1x01 Pilot HDTV x264-FoV [eztv]',
+    episodeName: 'Pilot',
+    unknown: undefined
+  },
+  {
+    name: 'Doctor.Who.2005.8x11.Dark.Water.720p.HDTV.x264-FoV[rartv]',
+    season: 8,
+    episode: 11,
+    episodeName: 'Dark Water',
+    unknown: undefined
+  },
+  {
+    name: 'Gotham.S01E07.Penguins.Umbrella.WEB-DL.x264.AAC',
+    episodeName: 'Penguins Umbrella',
+    unknown: undefined
   }
 ];
 

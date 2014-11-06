@@ -19,7 +19,8 @@ var patterns = {
   extended: /EXTENDED/,
   hardcoded: /HC/,
   proper: /PROPER/,
-  repack: /REPACK/
+  repack: /REPACK/,
+  garbage: /1400Mb|3rd Nov/
 };
 var types = {
   season: 'integer',
@@ -37,7 +38,7 @@ core.on('setup', function (data) {
 });
 
 core.on('start', function() {
-  var key, match, index, clean;
+  var key, match, index, clean, part;
 
   for(key in patterns) {
     if(patterns.hasOwnProperty(key)) {
@@ -61,14 +62,35 @@ core.on('start', function() {
         }
       }
 
-      core.emit('part', {
+      if(key === 'group') {
+        if(clean.match(patterns.video) || clean.match(patterns.release)) {
+          continue;
+        }
+      }
+
+      part = {
         name: key,
         match: match,
         raw: match[index.raw],
         clean: clean
-      });
+      };
+
+      if(key === 'episode') {
+        core.emit('map', torrent.name.replace(part.raw, '{episode}'));
+      }
+
+      core.emit('part', part);
     }
   }
 
   core.emit('common');
+});
+
+core.on('late', function (part) {
+  if(part.name === 'group') {
+    core.emit('part', part);
+  }
+  else if(part.name === 'episodeName') {
+    core.emit('part', part);
+  }
 });
