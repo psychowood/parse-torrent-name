@@ -1,8 +1,7 @@
 {
   "name": "parse-torrent-name",
-  /* "main": "dist/parse-torrent-name.js", */
-  "main": "bi,/index.js",
   "version": "0.5.1",
+  "main": "bin/index.js",
   "homepage": "https://github.com/psychowood/parse-torrent-name",
   "authors": [
   "jzjzjzj",
