@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "0.10"
 before_install: npm install -g grunt-cli tape
-install: npm install grunt-contrib-clean grunt-browserify grunt-contrib-uglify grunt-tape
+install: npm install grunt-contrib-clean grunt-browserify grunt-contrib-uglify grunt-tape grunt-lib-phantomjs
