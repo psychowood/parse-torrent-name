@@ -24,7 +24,7 @@
     "tape": "^3.0.1"
   },
   "scripts": {
-    "test": "tape test.js | tap-spec"
+    "test": "grunt test"
   },
   "main": "index.js",
   "dependencies": {
