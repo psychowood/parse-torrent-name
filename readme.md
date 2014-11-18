@@ -1,4 +1,9 @@
-# parse-torrent-name repackaged for bower and with grunt build [![Build Status](https://travis-ci.org/psychowood/parse-torrent-name.svg?branch=master)](https://travis-ci.org/psychowood/parse-torrent-name)
+# parse-torrent-name - bower package [![Build Status](https://travis-ci.org/psychowood/parse-torrent-name.svg?branch=master)](https://travis-ci.org/psychowood/parse-torrent-name)
+
+Node.js modules converted to bower module with broserify.
+Builds with grunt, tests with tape and tests broserified module with phantomjs+custom logic to intercept tape output.
+
+----
 
 Parses torrent name of a movie or TV show.
 
