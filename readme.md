@@ -31,8 +31,6 @@ $ bower install parse-torrent-name
 
 ## Usage:
 ```javascript
-var ptn = require('parse-torrent-name');
-
 ptn('The.Staying.Alive.S05E02.720p.HDTV.x264-KILLERS[rartv]');
 /*
 { season: 5,
