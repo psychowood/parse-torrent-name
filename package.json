@@ -5,29 +5,31 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/psychowood/parse-torrent-name.git"
-    },
-    "homepage": "https://github.com/psychowood/parse-torrent-name",
-    "bugs": {
-      "url": "https://github.com/psychowood/parse-torrent-name/issues"
-      },
-      "keywords": [
-      "torrent",
-      "parse torrent name"
-      ],
-      "devDependencies": {
-        "grunt": "^0.4.5",
-        "tap-spec": "^1.0.1",
-        "tape": "^3.0.1",
-        "grunt-contrib-uglify": "^0.6.0"
-        },
-        "scripts": {
-          "test": "tape test.js | tap-spec"
-          },
-          "main": "index.js",
-          "dependencies": {
-            "tap-spec": "^1.0.1",
-            "tape": "^3.0.3"
-            },
-            "author": "",
-            "license": "MIT"
-          }
+  },
+  "homepage": "https://github.com/psychowood/parse-torrent-name",
+  "bugs": {
+    "url": "https://github.com/psychowood/parse-torrent-name/issues"
+  },
+  "keywords": [
+    "torrent",
+    "parse torrent name"
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-lib-phantomjs": "^0.6.0",
+    "grunt-tape": "0.0.2",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.1"
+  },
+  "scripts": {
+    "test": "tape test.js | tap-spec"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.3"
+  },
+  "author": ""
+}

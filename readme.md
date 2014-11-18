@@ -1,4 +1,4 @@
-# parse-torrent-name [![Build Status](https://travis-ci.org/jzjzjzj/parse-torrent-name.svg?branch=master)](https://travis-ci.org/jzjzjzj/parse-torrent-name) [![Code Climate](https://codeclimate.com/github/jzjzjzj/parse-torrent-name/badges/gpa.svg)](https://codeclimate.com/github/jzjzjzj/parse-torrent-name)
+# parse-torrent-name repackaged for bower and with grunt build [![Build Status](https://travis-ci.org/psychowood/parse-torrent-name.svg?branch=master)](https://travis-ci.org/psychowood/parse-torrent-name) [![Code Climate](https://codeclimate.com/github/jzjzjzj/parse-torrent-name/badges/gpa.svg)](https://codeclimate.com/github/jzjzjzj/parse-torrent-name)
 
 Parses torrent name of a movie or TV show.
 
@@ -26,7 +26,7 @@ Parses torrent name of a movie or TV show.
 
 ## Install:
 ```bash
-$ npm install parse-torrent-name
+$ bower install parse-torrent-name
 ```
 
 ## Usage:

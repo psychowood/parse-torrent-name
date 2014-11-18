@@ -1,29 +1,27 @@
 {
   "name": "parse-torrent-name",
   "version": "0.5.1",
-  "main": "bin/index.js",
+  "main": [
+    "dist/parse-torrent-name.standalone.js"
+  ],
   "homepage": "https://github.com/psychowood/parse-torrent-name",
   "authors": [
-  "jzjzjzj",
-  "Giacomo Giustozzi <psychowood@gmail.com>"
+    "jzjzjzj",
+    "Giacomo Giustozzi <psychowood@gmail.com>"
   ],
   "description": "Parses torrent name of a movie or TV show",
-  "moduleType": [
-  "globals"
-  ],
   "keywords": [
-  "torrent",
-  "parse",
-  "filename"
+    "torrent",
+    "parse torrent name",
+    "parse scene release"
   ],
-  "license": "MIT",
-  "private": true,
   "ignore": [
-  "**/.*",
-  "node_modules",
-  "bower_components",
-  "test",
-  "tests",
-  "bin"
-  ]
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "bin"
+  ],
+  "devDependencies": {}
 }
